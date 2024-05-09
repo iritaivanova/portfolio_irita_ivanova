@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formação</title>
+    <style>
+        
+        .container{display: grid;}
+
+        header{
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: lightcoral;
+        }
+
+        .menu{
+            grid-column-start: 6;
+            grid-column-end: 12;
+            justify-content: center;/*para centralizar o menu*/
+            gap: 20px;
+        }
+
+        .principal{
+            grid-column-start: 1;
+            grid-column-end: 12;
+            padding-left: 40px;
+            padding-right: 40px;
+            text-align: center;
+            color:black
+        }
+
+        body{background-color: beige;
+            margin: 15;}
+
+        h1{
+            text-align: left;
+            font-size: 35px;
+            color:firebrick;
+        }
+        p1{font-size: 20px;} /*ao chamar depois o parágrafo p1, aparecerá essa configuração do tamanho especificada*/
+
+        footer{
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: lightcoral;
+        }
+
+        ul{
+            list-style-type: none;
+            color: lightcoral;
+        }
+
+        ul li{
+            position:relative;   
+        }
+
+        li ul{
+            position:absolute;
+            left:-40px;
+            top: 35px;
+            width:max-content;
+            display:none;
+        }
+
+        a,
+        a:link{
+            text-decoration: none;
+            padding: 8px 16px;
+            border:solid lightcoral 2px;
+        }
+
+        li{float: left;}
+
+        a:hover{
+            background-color: lightcoral;
+            color: white;
+        }
+
+        li:hover ul{
+            display:block;
+        }
+
+        @media only screen and (max-width:767px) {
+            .wrapper {
+                grid-column-end: 1;
+                grid-auto-columns: 1;
+            }
+            
+            .principal{
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="container"> <!--cabeçalho-->
+        <h1 style="color:white; text-align: center;">Irita Ivanova</h1>
+        <br>
+    </header>
+
+    <nav class="container menu">
+        <ul> <!--lista não ordenada para inserir os nomes no menu-->
+            <li><a href="index.html">Sobre mim</a></li>
+            <li><a href="Formação.html">Formação</a>
+                <ul> <!--sub-menu-->
+                    <li><a href="Formação.html">Formação Acadêmica</a></li>
+                    <br>
+                    <br>
+                    <li><a href="Cursos.html">Outros Cursos</a></li>
+                    </li>
+                </ul>
+            <li><a href="Portfólio.html">Portfólio</a></li>
+            <li><a href="Contato.html">Contato</a></li>
+        </ul>
+        </nav>
+    
+    <section class="container principal">
+        <h1>Formação Acadêmica</h1>
+            <div>
+                <p1><strong>CST em Análise e Desenvolvimento de Sistemas</strong></p1>
+                <p>Em curso, conclusão prevista: Janeiro/2025<br>Uninter, Curitiba, PR</p> 
+                <a href="https://www.uninter.com/graduacao-ead/curso-analise-e-desenvolvimento-de-sistemas/?gad_source=1&gclid=Cj0KCQjw0MexBhD3ARIsAEI3WHLOekzlltHZi59SHCv8TOlwV9ztLtCFn3C2UKZBi0lB_j6mXkm5ZSEaAhUrEALw_wcB" target="_blank" style="border:none; text-decoration: underline;">Sobre o Curso Tecnologia em Análise e Desenvolvimento do Sistemas, UNINTER</a> <!--link para acessar outra página na internet em nova aba para a consulta das informações-->
+            </div>
+            <br> <!--quebra linha-->
+            <br>
+            <br>
+             <div>
+                <p1><strong>Pós-graduação em Empreendedorismo e Inovação</strong></p1>
+                <p>Concluído em Setembro/2021<br>Uniasselvi, Curitiba, PR</p>
+                <P>Descrição: Proporciona aos profissionais reflexões e ferramentas para inovar em seus empreendimentos e/ou nas organizações em que trabalham. Através do estudo do Design Thinking,<br> Business Model Generation, estratégias inovadoras de marketing, Big Data Analytic e mais, o profissional estará preparado para utilizar novas tecnologias e criar estratégias empreendedoras nos mais variados campos de atuação.</P>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div>
+                <p1><strong>Administração de Empresas</strong></p1>
+                <p>Concluído em Novembro/2011<br>Faculdades Opet, Curitiba, PR</p>
+                <p>Descrição: Conhecimentos relevantes para a transformação das organizações e da sociedade. Estudos envolvem gestão, economia, finanças,<br> planejamento estratégico e processos organizacionais para trabalhar em empresas ou abrir o próprio empreendimento.</p>
+            </div>
+
+    </section>
+    <br>
+    <br>
+    <footer class="container"> <!--rodapé da página-->
+        <h1 style="color:white; text-align: center;">Análise e Desenvolvimento de Sistemas</h1>
+    </footer>
+</body>
+</html>

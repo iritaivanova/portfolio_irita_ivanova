@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <style> /*dentro dessa tag são colocadas as configurações do estilo*/
+
+        .container{display: grid;}
+
+        header{
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: lightcoral;/*define a cor do fundo do cabeçalho*/
+        }
+
+        .menu{
+            grid-column-start: 6;
+            grid-column-end: 12;
+            justify-content: center;/*para centralizar o menu*/
+            gap: 20px;
+        }
+
+        .foto{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            padding-left: 40px;
+        }
+
+        .infos{
+            padding-left: 0px;
+        }
+
+        .principal{
+            grid-column-start: 4;
+            grid-column-end: 12;
+            padding-left: 20px;
+            padding-right: 40px;
+            text-align: justify;
+            color:black
+        }
+
+        body{background-color: beige;
+            margin: 15;}
+
+        footer{
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: lightcoral;
+        }
+
+        h1{
+            text-align: left; /*formatação do título*/
+            font-size: 35px;
+            color:firebrick;
+        }
+
+        ul{
+            list-style-type: none;
+            color: lightcoral;
+        }
+
+        ul li{
+            position:relative;/*posição relativa indica que vai ter um sub-menu*/
+        }
+
+        li ul{
+            position:absolute;/*configuraçãos do sub-menu*/
+            left:-40px;
+            top: 35px;
+            width:max-content;
+            display:none;
+        }
+
+        a,
+        a:link{
+            text-decoration: none; /*estilo dos links*/
+            padding: 8px 16px;
+            border:solid lightcoral 2px;
+        }
+
+        li{float: left;}
+
+        a:hover{
+            background-color: lightcoral;/*definição o que acontece com a aparência do link quando sobreposto o mouse*/
+            color: white;
+        }
+
+        li:hover ul{
+            display:block;
+        }
+
+        p1::first-letter{font-size: x-large;}/*No parágrafo p1, a primeira letra vai ser exibida maior*/
+
+        @media only screen and (max-width:767px) {
+            .wrapper {
+                grid-column-end: 1;
+                grid-auto-columns: 1;
+            }
+            .foto{
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+            .principal{
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="container"> <!--cabeçalho-->
+        <h1 style="color:white; text-align: center;">Irita Ivanova</h1>
+        <br>
+    </header>
+
+    <nav class="container menu"> <!--aqui estão sendo chamadas as classes container e .menu-->
+    <ul>
+        <li><a href="Sobre_mim.html">Sobre mim</a></li>
+        <li><a href="Formação.html">Formação</a>
+            <ul> <!--sub-menu que aparecerá-->
+                <li><a href="Formação.html">Formação Acadêmica</a></li>
+                <br>
+                <br>
+                <li><a href="Cursos.html">Outros Cursos</a></li>
+                </li>
+            </ul>
+        <li><a href="Portfólio.html">Portfólio</a></li>
+        <li><a href="Contato.html">Contato</a></li>
+    </ul>
+    </nav>
+
+    <div class="container wrapper">
+        <aside class="foto"> <!--aside significa ao lado-->
+            <img src="Foto perfil.jpeg" alt="foto" title="foto" width="97%" height="50%">
+            <div class="infos">
+                <p><strong>Nome:</strong> Irita Ivanova</p>
+                <p><strong>Estudante:</strong> CST em Análise e <br> Desenvolvimento de Sistemas</p>
+                <p><strong>Ocupação:</strong> Prestadora de Serviços <br> (MEI)</p>
+                <p><strong>Data do nascimento:</strong> 08/06/1978</p>
+            </div>
+        </aside>
+       
+        
+        <section class="container principal">
+            <h1>Sobre mim</h1> <!--as configurações do estilo ao chamar o h1 já foram definidas em css -->
+                <p1>Sou profissional que gosta aprender coisas novas e interagir com pessoas. Sempre trabalhei com pessoas - com atendimento aos clientes, oferecendo excelência e comprometimento, assim gerando confiança no meu trabalho. Portanto, valorizo empatia, paciência e respeito às diferenças.</p1>
+                <br>
+                <p1>Atualmente atuo como microempreendedora na área de beleza, mas estou em transição para área de TI. Portanto, estou estudando linguagens como HTML, CSS, JS. Gosto de pesquisar sobre assuntos relacionados ao UI, pensando sobre as possibilidades de melhorar a interação das pessoas com as tecnologias. Diante disso, para ampliar meus conheimentos na área de tecnologia, sou também estudante do curso de "Análise e Desenvolvimento de Sistemas". Já conclui disciplinas como Análise de Sistemas, Banco de Dados, Engenharia de Software, Lógica de Programação e Algoritmos (Python), Programação orientada a Objetos (Java), Programação Web e outras. A área de TI me encanta pelas oportunidades de aprendizado sobre como melhorar a vida das pessoas através da tecnologia, pois esta está cada vez mais presente em nossas vidas. </p1>
+                <br>
+                <p1>Ao falar sobre a minha experiência profissional como empreendedora, gostaria de destacar que isso têm me possibilitado a desenvolver muitas habilidades como responsabilidade, organização, comunicação e coragem para realizar algo novo ou criar melhorias. Têm me proporcionado o entendimento de como se constrói um empreendimento, como acontece a conquista e fidelização dos clientes, e observar as regras dos negócios.</p1>
+                <br>
+                <p1>Além disso, gosto de aproveitar as oportunidades para melhorar a minha comunicação em inglês. Atualmente meus conhecimentos são intermediários, mas consigo conversar e escrever quando necessário. E ao falar sobre idiomas, possuo também conhecimentos básicos em russo e sou fluente em letão. Diante disso, gosto atuar como intérprete voluntária ou realizar pequenas traduções para o letão.</p1>
+                <br>
+                <p1>E por fim, no meu tempo livre gosto de criar trabalhos artesanais, pois assim eu posso soltar minha criatividade, desenvolver experiências com cores e texturas, cultivando a ideia da sustentabilidade.</p1>
+                <br>
+                <br>
+        </section>
+    </div> 
+    <footer class="container">
+        <h1 style="color:white; text-align: center;">Análise e Desenvolvimento de Sistemas</h1>
+    </footer>
+    
+</body>
+</html>

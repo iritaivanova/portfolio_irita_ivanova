@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.container{display: grid;}
+
+header{
+    grid-column-start: 1;
+    grid-column-end: 12;
+    background-color: lightcoral;
+}
+
+.menu{
+    grid-column-start: 6;
+    grid-column-end: 12;
+    justify-content: center;/*para centralizar o menu*/
+    gap: 20px;
+}
+
+.principal{
+    grid-column-start: 1; /*configurações da classe chamada principal*/
+    grid-column-end: 12;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align:center;
+    color:black
+}
+
+body{background-color: beige;
+    margin: 15;}
+
+h1{
+    text-align: left;
+    font-size: 35px;
+    color:firebrick;
+}
+p1{font-size: 20px;}
+
+footer{
+    grid-column-start: 1;
+    grid-column-end: 12;
+    background-color: lightcoral;
+}
+
+ul{
+    list-style-type: none;
+    color: lightcoral;
+}
+
+ul li{
+    position:relative;   
+}
+
+li ul{
+    position:absolute;
+    left:-40px;
+    top: 35px;
+    width:max-content;
+    display:none;
+}
+
+a,
+a:link{
+    text-decoration: none;
+    padding: 8px 16px;
+    border:solid lightcoral 2px;
+}
+
+li{float: left;}
+
+a:hover{
+    background-color: lightcoral;
+    color: white;
+}
+
+li:hover ul{
+    display:block;
+}
+
+@media only screen and (max-width:767px) {
+    .wrapper {
+        grid-column-end: 1;
+        grid-auto-columns: 1;
+    }
+    .foto{
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .principal{
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <header class="container"> <!--igual ás outras páginas, pois essa parte é igual que aparece-->
+        <h1 style="color:white; text-align: center;">Irita Ivanova</h1>
+        <br>
+    </header>
+
+    <nav class="container menu">
+        <ul>
+            <li><a href="index.html">Sobre mim</a></li>
+            <li><a href="Formação.html">Formação</a>
+                <ul>
+                    <li><a href="Formação.html">Formação Acadêmica</a></li>
+                    <br>
+                    <br>
+                    <li><a href="Cursos.html">Outros Cursos</a></li>
+                    </li>
+                </ul>
+            <li><a href="Portfólio.html">Portfólio</a></li>
+            <li><a href="Contato.html">Contato</a></li>
+        </ul>
+        </nav>
+    
+    <section class="container principal">  
+    <h1>Outros cursos</h1> 
+        <div>
+            <p1><strong>Preparatótio TOEIC</strong> (UNINTER, 2024)</p1> <!--strong indica que a escrita vai aparecer em negrito, ou seja, mais forte-->
+            <p>Descrição: O TOEIC (Test of English for International Communication) mede sua capacidade de se comunicar em inglês em um ambiente profissional.</p>
+            <br>
+            <br>
+            <p1><strong>Hardware Basics</strong> (CISCO, 2024)</p1>
+            <p>Descrição: Neste curso são explorados os fundamentos de computadores e dispositivos móveis, os componentes que os compõem, como funcionam e ferramentas e técnicas básicas de solução de problemas. </p>
+            <br>
+            <br>
+            <p1><strong>Discover Tech</strong> (Comunidade Riga TechGirls, 2023)</p1>
+            <p>Descrição: Discover Tech é um programa de nível básico que permite compreender quão diversos são os campos da tecnologia, quais oportunidades eles criam e como o conhecimento sobre eles pode ser útil<br> em qualquer outro setor hoje.<br>O objetivo do programa é incentivar as pessoas a abordarem as TIC, melhorando as suas competências digitais e até mesmo iniciarem uma carreira em TI! </p> <!--br indica a quebra da linha-->
+            <br>
+            <br>
+            <p1><strong>IT Support Professional</strong> (Coursera, 2022)</p1>
+            <p>Descrição: Neste curso é possível aprender a fornecer suporte completo ao cliente, desde a identificação de problemas até a solução de problemas. Também realizar tarefas diárias de suporte de TI, incluindo<br> montagem de computadores, redes sem fio, instalação de programas e atendimento ao cliente.</p>
+            <br>           
+        </div>
+    </section>
+    <footer class="container">
+        <h1 style="color:white; text-align: center;">Análise e Desenvolvimento de Sistemas</h1>
+    </footer>            
+</body>
+</html>

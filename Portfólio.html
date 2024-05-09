@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+
+        .container{display: grid;}
+
+        header{
+            grid-column-start: 1; /*o cabeçalho têm configuraçãoes parecidas com outras páginas do site, pois permanece basicamente igual*/
+            grid-column-end: 12;
+            background-color: lightcoral;
+        }
+
+        .menu{
+            grid-column-start: 6;
+            grid-column-end: 12;
+            justify-content: center;/*para centralizar o menu*/
+            gap: 20px;
+        }
+
+        .principal{
+            grid-column-start: 1;
+            grid-column-end: 12;
+            padding-left: 40px;
+            text-align:justify;
+            color:black
+        }
+
+        body{background-color: beige;
+            margin: 15;}
+
+        footer{
+            grid-column-start: 1; /*o rodapé está praticamente igual aos outras páginas, portanto são as mesmas configurações*/
+            grid-column-end: 12;
+            background-color: lightcoral;
+        }
+
+        h1{
+            text-align: left;
+            font-size: 35px;
+            color:firebrick;
+        }
+
+        ul{
+            list-style-type: none;
+            color: lightcoral;
+        }
+
+        ul li{
+            position:relative;   
+        }
+
+        li ul{
+            position:absolute; /*formatações do sub-menu*/
+            left:-40px;
+            top: 35px;
+            width:max-content;
+            display:none;
+        }
+
+        a,
+        a:link{
+            text-decoration: none;
+            padding: 8px 16px;
+            border:solid lightcoral 2px;
+        }
+
+        li{float: left;}
+
+        a:hover{
+            background-color: lightcoral;
+            color: white;
+        }
+
+        li:hover ul{
+            display:block;
+        }
+
+        @media only screen and (max-width:767px) { /*define as configurações para uma tela que terá medida máxima de 767 pixels*/
+            .wrapper {
+                grid-column-end: 1;
+                grid-auto-columns: 1;
+            }
+            
+            .principal{
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+        }
+
+    </style>
+</head>
+
+<body> <!--a partir dessa tag body é definido o que efetivamente vai aparecer na página-->
+
+    <header class="container">
+        <h1 style="color:white; text-align: center;">Irita Ivanova</h1>
+        <br>
+    </header>
+
+    <nav class="container menu"> <!--aqui são chamadas as configurações das classes container e menu-->
+        <ul> <!--lista não ordenada-->
+            <li><a href="index.html">Sobre mim</a></li>
+            <li><a href="Formação.html">Formação</a>
+                <ul> <!--sub-menu que é uma espécie de lista dentro de uma outra-->
+                    <li><a href="Formação.html">Formação Acadêmica</a></li>
+                    <br>
+                    <br>
+                    <li><a href="Cursos.html">Outros Cursos</a></li>
+                    </li>
+                </ul>
+            <li><a href="Portfólio.html">Portfólio</a></li>
+            <li><a href="Contato.html">Contato</a></li>
+        </ul>
+    </nav>
+       
+    <section class="container principal wrapper">
+            <h1>Portfólio</h1> <!--Aqui é chamado o h1, cuja definições de estilo já foram especificadas no header em css-->
+            <p style="font-size: 23px; text-align: center;"><strong>Protótipo:</strong> Aplicativo móvel para profissionais da área de estética e beleza.</p1>
+            <br>
+            <br>
+            <img src="ImgBeleza.jpeg" alt="logo" title="logo" width="10%" height="60%">
+            <p style="text-align: center;"><a href="https://www.youtube.com/watch?v=EWXa800iZuY" target="_blank" style="border:none; text-decoration: underline; font-size: 20px;">Acesse AQUI o vídeo do protótipo!</a></p>
+            <h style="font-size: 18px; color: brown;">Objetivos:</h>
+            <ol style="color: brown; float: left; font-size: 18px;"> <!--ol exibirá uma lista ordenada-->
+                <li>Desenvolver um aplicativo móvel para microempreendedores da área de estética e beleza, definindo e apresentando as principais telas da solução tecnológica.</li>
+                <li>Conscientizar os microempreendedores sobre a importância de registro e controle das atividades profissionais por meio de um aplicativo.</li>
+                <li> Analisar e avaliar os requisitos funcionais e não funcionais da aplicação junto com os microempreendedores da área de estética e beleza.</li>
+            </ol>
+            <br>
+            <br>
+            <p style="font-size: 23px; text-align: center;"><strong>Projeto:</strong> Controle de Estoque da Mercearia (Python).</p1>
+            <p style="text-align: center;"><a href="https://colab.research.google.com/drive/1BNB9FdiIMPwbZ0-wauO5qRSfMvb8obli?usp=sharing" target="_blank" style="border:none; text-decoration: underline; font-size: 20px;">Acesse AQUI o código no Google Colab</a></p>
+            <br>
+            <br>
+    </section> 
+
+    <footer class="container"> <!--rodapé da página-->
+        <h1 style="color:white; text-align: center;">Análise e Desenvolvimento de Sistemas</h1>
+    </footer>
+    
+</body>
+</html>
